@@ -1,0 +1,17 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Editor folders
+.vscode/
+.idea/
