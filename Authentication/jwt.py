@@ -10,8 +10,7 @@ async def create_token(name):
 
 async def verify_token(token: str) -> dict:
     try:
-        payload = jwt.decode(token, os.getenv("SECRET_KEY"), algorithms=[os.getenv("ALGORITHM")])# `jwt.decode` will raise an exception if expired or invalid
-        print("======>", payload)
+        payload = jwt.decode(token, os.getenv("SECRET_KEY"), algorithms=[os.getenv("ALGORITHM")])
         return payload
     except JWTError as e:
         raise ValueError("Invalid or expired token") from e
